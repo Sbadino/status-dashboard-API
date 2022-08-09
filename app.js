@@ -26,21 +26,12 @@ app.listen(process.env.PORT || 3000, () => {
 app.use(cors());
 
 app.get("/", (req, res) => {
-    res.send("API CALL.");
-})
-
-// fetch(`https://api.factoryfour.com/API_NAME/health/status`)
-//     .then(res => {
-//       res.json(data)
-//     })
-
-axios.get("https://api.factoryfour.com/API_NAME/health/status")
+    
+    axios.get("https://api.factoryfour.com/API_NAME/health/status")
     .then((fetchRes) => {
-      return fetchRes.json();
-    })
-    .then((data) => {
-      res.json(data);
+      res.json(fetchRes.data);
     })
     .catch((err) => {
       console.log(err);
     })
+})
