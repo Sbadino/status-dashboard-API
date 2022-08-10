@@ -11,7 +11,7 @@ app.listen(process.env.PORT || 3000, () => {
 app.use(cors());
 
 app.get("/", (req, res) => {
-    axios.get("https://api.factoryfour.com/API_NAME/health/status")
+    axios.get("https://api.factoryfour.com/accounts/health/status")
     .then((fetchRes) => {
       res.json(fetchRes.data);
     })
