@@ -1,9 +1,14 @@
 {
+  "homepage": "http://Sbadino.github.io/status-dashboard-API",
   "name": "3.-health-status-exercise-api",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "build": "./node_modules/.bin/netlify-lambda build src",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -12,7 +17,12 @@
     "axios": "^0.27.2",
     "cors": "^2.8.5",
     "express": "^4.18.1",
+    "netlify-lambda": "^2.0.15",
     "node-fetch": "^2.6.7",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "serverless-http": "^3.0.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }

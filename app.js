@@ -1,8 +1,8 @@
-const fetch = require("node-fetch");
 const express = require('express');
 const app = express();
 const cors = require('cors');
 const { default: axios } = require('axios');
+const serverless = require('serverless-http');
 
 app.listen(process.env.PORT || 3000, () => {
     console.log("Server running on port 3000.");
@@ -22,3 +22,5 @@ app.get("/", (req, res) => {
       });
     })
 })
+
+module.exports.handler = serverless(app);
