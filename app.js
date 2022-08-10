@@ -10,7 +10,7 @@ app.listen(process.env.PORT || 3000, () => {
 
 app.use(cors());
 
-app.get("/", (req, res) => {
+app.get("/accounts", (req, res) => {
     axios.get("https://api.factoryfour.com/accounts/health/status")
     .then((fetchRes) => {
       res.json(fetchRes.data);
@@ -21,6 +21,19 @@ app.get("/", (req, res) => {
         message: err.message,
       });
     })
+})
+
+app.get("/invites", (req, res) => {
+  axios.get("https://api.factoryfour.com/invites/health/status")
+  .then((fetchRes) => {
+    res.json(fetchRes.data);
+  })
+  .catch((err) => {
+    res.json({ 
+      success: false,
+      message: err.message,
+    });
+  })
 })
 
 module.exports.handler = serverless(app);
