@@ -20,6 +20,8 @@ app.listen(process.env.PORT || 3000, () => {
 
 app.use(cors());
 
+// ACCOUNTS
+
 app.get("/accounts", (req, res) => {
     axios.get("https://api.factoryfour.com/accounts/health/status")
     .then((fetchRes) => {
@@ -32,6 +34,8 @@ app.get("/accounts", (req, res) => {
       });
     })
 })
+
+// ASSETS
 
 app.get("/assets", (req, res) => {
   axios.get("https://api.factoryfour.com/assets/health/status")
@@ -46,6 +50,8 @@ app.get("/assets", (req, res) => {
   })
 })
 
+// CUSTOMERS
+
 app.get("/customers", (req, res) => {
   axios.get("https://api.factoryfour.com/customers/health/status")
   .then((fetchRes) => {
@@ -58,6 +64,8 @@ app.get("/customers", (req, res) => {
     });
   })
 })
+
+// DATAPOINTS
 
 app.get("/datapoints", (req, res) => {
   axios.get("https://api.factoryfour.com/datapoints/health/status")
@@ -72,6 +80,8 @@ app.get("/datapoints", (req, res) => {
   })
 })
 
+// DEVICES
+
 app.get("/devices", (req, res) => {
   axios.get("https://api.factoryfour.com/devices/health/status")
   .then((fetchRes) => {
@@ -84,6 +94,8 @@ app.get("/devices", (req, res) => {
     });
   })
 })
+
+// DOCUMENTS
 
 app.get("/documents", (req, res) => {
   axios.get("https://api.factoryfour.com/documents/health/status")
@@ -98,6 +110,8 @@ app.get("/documents", (req, res) => {
   })
 })
 
+// FORMS
+
 app.get("/forms", (req, res) => {
   axios.get("https://api.factoryfour.com/forms/health/status")
   .then((fetchRes) => {
@@ -110,6 +124,8 @@ app.get("/forms", (req, res) => {
     });
   })
 })
+
+// INVITES
 
 app.get("/invites", (req, res) => {
   axios.get("https://api.factoryfour.com/invites/health/status")
@@ -124,6 +140,8 @@ app.get("/invites", (req, res) => {
   })
 })
 
+// MEDIA
+
 app.get("/media", (req, res) => {
   axios.get("https://api.factoryfour.com/media/health/status")
   .then((fetchRes) => {
@@ -136,6 +154,8 @@ app.get("/media", (req, res) => {
     });
   })
 })
+
+// MESSAGES
 
 app.get("/messages", (req, res) => {
   axios.get("https://api.factoryfour.com/messages/health/status")
@@ -150,6 +170,8 @@ app.get("/messages", (req, res) => {
   })
 })
 
+// NAMESPACES
+
 app.get("/namespaces", (req, res) => {
   axios.get("https://api.factoryfour.com/namespaces/health/status")
   .then((fetchRes) => {
@@ -162,6 +184,8 @@ app.get("/namespaces", (req, res) => {
     });
   })
 })
+
+// ORDERS
 
 app.get("/orders", (req, res) => {
   axios.get("https://api.factoryfour.com/orders/health/status")
@@ -176,6 +200,8 @@ app.get("/orders", (req, res) => {
   })
 })
 
+// PATIENTS
+
 app.get("/patients", (req, res) => {
   axios.get("https://api.factoryfour.com/patients/health/status")
   .then((fetchRes) => {
@@ -188,6 +214,8 @@ app.get("/patients", (req, res) => {
     });
   })
 })
+
+// RELATIONSHIPS
 
 app.get("/relationships", (req, res) => {
   axios.get("https://api.factoryfour.com/relationships/health/status")
@@ -202,6 +230,8 @@ app.get("/relationships", (req, res) => {
   })
 })
 
+// RULES
+
 app.get("/rules", (req, res) => {
   axios.get("https://api.factoryfour.com/rules/health/status")
   .then((fetchRes) => {
@@ -214,6 +244,8 @@ app.get("/rules", (req, res) => {
     });
   })
 })
+
+// TEMPLATES
 
 app.get("/templates", (req, res) => {
   axios.get("https://api.factoryfour.com/templates/health/status")
@@ -228,6 +260,8 @@ app.get("/templates", (req, res) => {
   })
 })
 
+// USERS
+
 app.get("/users", (req, res) => {
   axios.get("https://api.factoryfour.com/users/health/status")
   .then((fetchRes) => {
@@ -240,6 +274,8 @@ app.get("/users", (req, res) => {
     });
   })
 })
+
+// WORKFLOWS
 
 app.get("/workflows", (req, res) => {
   axios.get("https://api.factoryfour.com/workflows/health/status")
